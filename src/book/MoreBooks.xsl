@@ -1,5 +1,5 @@
 <book:bookstore xmlns:book="http://www.example.org/Books">
-  <book:book category="MiPene">
+  <book:book category="Ficcion">
     <book:title lang="string">Lo que el viento se llevó</book:title>
     <book:author>Yo</book:author>
     <book:year>2016</book:year>

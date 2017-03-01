@@ -1,5 +1,5 @@
 
-package book;
+package model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "tipoTitle", propOrder = {
+@XmlType(name = "tipoTitle", namespace = "http://www.example.org/Books", propOrder = {
     "value"
 })
 public class TipoTitle {

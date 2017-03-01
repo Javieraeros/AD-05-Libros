@@ -1,5 +1,5 @@
 
-package book;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="title" type="{}tipoTitle"/>
+ *         &lt;element name="title" type="{http://www.example.org/Books}tipoTitle"/>
  *         &lt;element name="author" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="year" type="{http://www.w3.org/2001/XMLSchema}short"/>
  *         &lt;element name="price" type="{http://www.w3.org/2001/XMLSchema}float"/>
@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "tipoBook", propOrder = {
+@XmlType(name = "tipoBook", namespace = "http://www.example.org/Books", propOrder = {
     "title",
     "author",
     "year",
@@ -42,10 +42,13 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class TipoBook {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://www.example.org/Books", required = true)
     protected TipoTitle title;
+    @XmlElement(namespace = "http://www.example.org/Books")
     protected List<String> author;
+    @XmlElement(namespace = "http://www.example.org/Books")
     protected short year;
+    @XmlElement(namespace = "http://www.example.org/Books")
     protected float price;
     @XmlAttribute(name = "category")
     protected String category;
