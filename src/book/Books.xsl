@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<bookstore xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.example.org/NewXMLSchema books.xsd">
+<bookstore xmlns="http://www.example.org/Books"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+           xs:schemaLocation="http://www.example.org/Books Books.xsd">
 
     <book category="COOKING">
         <title lang="en">Everyday Italian</title>
